@@ -44,7 +44,7 @@
   }
 
   function setActive(id) {
-    var sem = id.indexOf("s2-") === 0 || id === "semester-2" ? "2" : "1";
+    var sem = id.indexOf("lk3") === 0 ? "3" : (id.indexOf("s2-") === 0 || id === "semester-2" ? "2" : "1");
     showSemester(sem);
     pills.forEach(function (a) {
       var on = a.getAttribute("href") === "#" + id;
@@ -75,6 +75,8 @@
       var el = document.querySelector(a.getAttribute("href"));
       if (el) observer.observe(el);
     });
+    var lk3 = document.getElementById("lk3");
+    if (lk3) observer.observe(lk3);
   }
 
   // 3. Bar progres membaca
